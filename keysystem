@@ -1,0 +1,82 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Login = Instance.new("ScreenGui")
+local LoginUi = Instance.new("Frame")
+local loginbutton = Instance.new("TextButton")
+local password = Instance.new("TextBox")
+local label = Instance.new("TextLabel")
+local ks = Instance.new("TextLabel")
+
+--Properties:
+
+Login.Name = "Login"
+Login.Parent = game.CoreGui
+LoginUi.Name = "LoginUi"
+LoginUi.Parent = Login
+LoginUi.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+LoginUi.BorderColor3 = Color3.fromRGB(15, 15, 15)
+LoginUi.BorderSizePixel = 4
+LoginUi.Position = UDim2.new(0.175849944, 0, 0.209163353, 0)
+LoginUi.Size = UDim2.new(0, 553, 0, 282)
+LoginUi.Active = true
+LoginUi.Draggable = true
+
+loginbutton.Name = "loginbutton"
+loginbutton.Parent = LoginUi
+loginbutton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+loginbutton.BorderColor3 = Color3.fromRGB(15, 15, 15)
+loginbutton.BorderSizePixel = 4
+loginbutton.Position = UDim2.new(0.318889409, 0, 0.702636242, 0)
+loginbutton.Size = UDim2.new(0, 200, 0, 50)
+loginbutton.Font = Enum.Font.GothamBlack
+loginbutton.Text = "Login"
+loginbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+loginbutton.TextSize = 20.000
+loginbutton.MouseButton1Down:connect(function()
+	if password.Text ==  "lunariscool" then
+		LoginUi.Visible = false
+	end
+end)
+
+password.Name = "password"
+password.Parent = LoginUi
+password.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+password.BorderColor3 = Color3.fromRGB(15, 15, 15)
+password.BorderSizePixel = 4
+password.Position = UDim2.new(0.318889409, 0, 0.371549249, 0)
+password.Size = UDim2.new(0, 200, 0, 50)
+password.Font = Enum.Font.GothamBlack
+password.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+password.PlaceholderText = "Password"
+password.Text = ""
+password.TextColor3 = Color3.fromRGB(255, 255, 255)
+password.TextSize = 20.000
+
+label.Name = "label"
+label.Parent = LoginUi
+label.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+label.BorderColor3 = Color3.fromRGB(15, 15, 15)
+label.BorderSizePixel = 4
+label.Position = UDim2.new(0, 0, -0.0622898415, 0)
+label.Size = UDim2.new(0, 553, 0, 17)
+label.Font = Enum.Font.GothamBlack
+label.Text = "Lunar Hub"
+label.TextColor3 = Color3.fromRGB(255, 255, 255)
+label.TextSize = 14.000
+
+ks.Name = "ks"
+ks.Parent = LoginUi
+ks.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+ks.BorderColor3 = Color3.fromRGB(15, 15, 15)
+ks.BorderSizePixel = 0
+ks.Position = UDim2.new(0.318889409, 0, 0.0820971578, 0)
+ks.Size = UDim2.new(0, 200, 0, 50)
+ks.Font = Enum.Font.GothamBlack
+ks.Text = "Key System"
+ks.TextColor3 = Color3.fromRGB(255, 255, 255)
+ks.TextScaled = true
+ks.TextSize = 14.000
+ks.TextWrapped = true
